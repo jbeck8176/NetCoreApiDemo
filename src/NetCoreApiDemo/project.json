@@ -1,8 +1,7 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.App": {
-      "version": "1.0.1",
-      "type": "platform"
+      "version": "1.0.1"
     },
     "Microsoft.AspNetCore.Mvc": "1.0.1",
     "Microsoft.AspNetCore.Routing": "1.0.1",
@@ -16,7 +15,6 @@
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0"
   },
-
   "tools": {
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final"
   },
@@ -39,6 +37,11 @@
     "configProperties": {
       "System.GC.Server": true
     }
+  },
+
+  "runtimes": {
+    "win10-x64": {},
+    "osx.10.11-x64": {}
   },
 
   "publishOptions": {
