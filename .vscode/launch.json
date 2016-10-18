@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}/src/NetCoreApiDemo/bin/Debug/netcoreapp1.0/NetCoreApiDemo.dll",
+            "program": "${workspaceRoot}/src/NetCoreApiDemo/bin/Debug/netcoreapp1.0/win10-x64/NetCoreApiDemo.dll",
             "args": [],
             "cwd": "${workspaceRoot}",
             "stopAtEntry": false,
