@@ -1,9 +1,13 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿
+using System;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using NetCoreApiDemo.Interfaces;
+using NetCoreApiDemo.Services;
 
 namespace NetCoreApiDemo
 {
@@ -40,6 +44,11 @@ namespace NetCoreApiDemo
 
             //Add the dependancy injection...
             services.AddSingleton<Interfaces.ITodoRepository, Repositories.TodoRepository>();
+            services.AddTransient<Interfaces.IOperationTransient, Operation>();
+            services.AddScoped<Interfaces.IOperationScoped, Operation>();
+            services.AddSingleton<Interfaces.IOperationSingleton, Operation>();
+            services.AddSingleton<Interfaces.IOperationSingletonInstance>(new Operation(Guid.Empty));
+            services.AddTransient<OperationService, OperationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,7 +57,10 @@ namespace NetCoreApiDemo
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
             app.UseCors("AllowAll");
-            app.UseMvc();
-        }
+            app.UseMvc(routes =>
+			{
+				routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+			});
+		}
     }
 }
