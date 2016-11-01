@@ -1,3 +1,7 @@
+Windows
+
 dotnet restore
 dotnet build --runtime win10-x64
 dotnet publish --configuration Release --runtime win10-x64
+
+Linux
