@@ -169,5 +169,6 @@
 "c:\Personal\NetCoreApiDemo\src\NetCoreApiDemo\Startup.cs"
 "c:\Personal\NetCoreApiDemo\src\NetCoreApiDemo\Controllers\TodoController.cs"
 "c:\Personal\NetCoreApiDemo\src\NetCoreApiDemo\Interfaces\ITodoRepository.cs"
+"c:\Personal\NetCoreApiDemo\src\NetCoreApiDemo\Models\TodoDetails.cs"
 "c:\Personal\NetCoreApiDemo\src\NetCoreApiDemo\Models\TodoItem.cs"
 "c:\Personal\NetCoreApiDemo\src\NetCoreApiDemo\Repositories\TodoRepository.cs"
